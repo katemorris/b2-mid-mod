@@ -5,6 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Mechanic.delete_all
+Ride.delete_all
+Park.delete_all
+RideMechanic.delete_all
+
 @bob = Mechanic.create!(
   name: 'Bob Knife',
   years_exp: 15
