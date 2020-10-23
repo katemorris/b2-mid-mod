@@ -5,5 +5,34 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-bob = Mechanic.create(name: 'Bob Knife', years_exp: 15)
-sue = Mechanic.create(name: 'Sue Markell', years_exp: 10)
+@bob = Mechanic.create!(
+  name: 'Bob Knife',
+  years_exp: 15
+)
+@sue = Mechanic.create!(
+  name: 'Sue Markell',
+  years_exp: 10
+)
+@six_flags = Park.create!(
+  name: 'Six Flags',
+  price: 35.50
+)
+@nitro = Ride.create!(
+  name: 'Nitro',
+  thrill_rating: 8,
+  park_id: @six_flags.id
+)
+@skull_mountain = Ride.create!(
+  name: 'Skull Mountain',
+  thrill_rating: 4,
+  park_id: @six_flags.id
+)
+@toro = Ride.create!(
+  name: 'El Toro',
+  thrill_rating: 8,
+  park_id: @six_flags.id
+)
+sue_nitro = RideMechanic.create!(mechanic: @sue, ride: @nitro)
+sue_toro = RideMechanic.create!(mechanic: @sue, ride: @toro)
+bob_skull = RideMechanic.create!(mechanic: @bob, ride: @skull_mountain)
+bob_nitro = RideMechanic.create!(mechanic: @bob, ride: @nitro)
