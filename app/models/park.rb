@@ -1,0 +1,2 @@
+class Parl < ApplicationRecord
+end
