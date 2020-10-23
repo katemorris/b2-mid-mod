@@ -36,7 +36,7 @@ describe "When I visit a mechanic's show page" do
     end
 
     expect(page).to have_content("Add a ride to workload")
-    expect(page).to have_field("Ride ID")
+    expect(page).to have_field(:ride_id)
   end
 
   it 'I can add a ride to their workload' do
