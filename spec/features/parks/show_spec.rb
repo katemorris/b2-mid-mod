@@ -19,10 +19,10 @@ describe 'When I visit an amusement park show page' do
     within('.rides') do
       expect(page).to have_content(@nitro.name)
       expect(page).to have_content(@skull_mountain.name)
-    end
 
-    expected = "Average Thrill Rating: #{@six_flags.avg_thrill.round(2)}/10"
-    expect(page).to have_content(expected)
+      expected = "Average Thrill Rating: #{@six_flags.avg_thrill.round(2)}/10"
+      expect(page).to have_content(expected)
+    end
   end
 
 end
