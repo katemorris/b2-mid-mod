@@ -16,5 +16,4 @@ describe 'When I visit a mechanics index page' do
     expect(page).to have_content(sue_expected)
     expect(page).to have_content(bob_expected)
   end
-
 end

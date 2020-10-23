@@ -18,7 +18,6 @@ describe 'When I visit an amusement park show page' do
   it 'I see the park data including a list of rides, average thrill rating' do
     visit "/parks/#{@six_flags.id}"
 
-
     within('.park-data') do
       expect(page).to have_content(@six_flags.name)
       expect(page).to have_content("$#{@six_flags.price.round(2)}")
@@ -32,5 +31,4 @@ describe 'When I visit an amusement park show page' do
       expect(page).to have_content(expected)
     end
   end
-
 end

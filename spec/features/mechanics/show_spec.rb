@@ -53,5 +53,4 @@ describe "When I visit a mechanic's show page" do
       expect(page).to have_content(@skull_mountain.name)
     end
   end
-
 end
