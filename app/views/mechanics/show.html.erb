@@ -3,7 +3,7 @@
 <section class="rides">
   <h2>Current Rides Assigned:</h2>
   <ul>
-    <% @mechanic.rides.each do |ride| %>
+    <% @mechanic.alpha_rides.each do |ride| %>
     <li><%= ride.name %></li>
     <% end %>
   </ul>
