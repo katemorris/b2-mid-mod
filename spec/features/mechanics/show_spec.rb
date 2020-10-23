@@ -53,4 +53,14 @@ describe "When I visit a mechanic's show page" do
       expect(page).to have_content(@skull_mountain.name)
     end
   end
+
+  it 'I see the list of rides in alphabetical order' do
+    visit mechanic_path(@sue)
+
+    within('.rides') do
+      expect(page).to have_content("Current Rides Assigned:")
+      expect(page.all('li')[0]).to have_content(@toro.name)
+      expect(page.all('li')[1]).to have_content(@nitro.name)
+    end
+  end
 end
