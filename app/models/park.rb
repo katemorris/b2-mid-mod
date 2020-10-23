@@ -1,2 +1,2 @@
-class Parl < ApplicationRecord
+class Park < ApplicationRecord
 end
